@@ -1,4 +1,4 @@
-import os
-
+import subprocess
 import streamlit as st
-st.write(os.system("lscpu"))
+c1=subprocess.run("lspci",shell=True,capture_output=True)
+st.write(cl.output.decode())
